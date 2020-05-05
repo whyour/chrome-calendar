@@ -23,24 +23,28 @@ export function getDocData(response) {
   let lastBlank = 0;
   let firstElement = firstDay.previousElementSibling;
   let lastElement = lastDay.nextElementSibling;
-  while (firstElement && firstElement.classList.contains('wnrl_kongbai')) {
+  while (firstElement && firstElement.classList.contains("wnrl_kongbai")) {
     firstBlank++;
     firstElement = firstElement.previousElementSibling;
   }
-  while (lastElement && lastElement.classList.contains('wnrl_kongbai')) {
+  while (lastElement && lastElement.classList.contains("wnrl_kongbai")) {
     lastBlank++;
     lastElement = lastElement.nextElementSibling;
   }
 
-  const detailArray = doc.querySelectorAll('.wnrl_k_you');
+  const detailArray = doc.querySelectorAll(".wnrl_k_you");
   const detailArr = [];
   for (const item of detailArray) {
     const biaoti = item.querySelector(".wnrl_k_you_id_biaoti").textContent;
     const riqi = item.querySelector(".wnrl_k_you_id_wnrl_riqi").textContent;
     const nongli = item.querySelector(".wnrl_k_you_id_wnrl_nongli").textContent;
-    const ganzhi = item.querySelector(".wnrl_k_you_id_wnrl_nongli_ganzhi") && item.querySelector(".wnrl_k_you_id_wnrl_nongli_ganzhi").textContent;
-    const jieri = item.querySelector(".wnrl_k_you_id_wnrl_jieri_neirong") && item.querySelector(".wnrl_k_you_id_wnrl_jieri_neirong").textContent;
-    
+    const ganzhi =
+      item.querySelector(".wnrl_k_you_id_wnrl_nongli_ganzhi") &&
+      item.querySelector(".wnrl_k_you_id_wnrl_nongli_ganzhi").textContent;
+    const jieri =
+      item.querySelector(".wnrl_k_you_id_wnrl_jieri_neirong") &&
+      item.querySelector(".wnrl_k_you_id_wnrl_jieri_neirong").textContent;
+
     detailArr.push({
       biaoti,
       riqi,
