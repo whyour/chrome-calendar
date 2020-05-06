@@ -6,9 +6,9 @@ chrome poetry calendar (Chrome Extension) V0.0.1
 
 ![home](https://cdn.jsdelivr.net/gh/whyour/chrome-calendar@latest/public/home.jpg)
 
-下载插件 [chrome-dashboard.crx](https://github.com/whyour/chrome-calendar/raw/master/chrome-calendar.crx)
+下载插件 [chrome-calendar.crx](https://github.com/whyour/chrome-calendar/raw/master/chrome-calendar.crx)
 
-cdn 下载 [chrome-dashboard.crx](https://cdn.jsdelivr.net/gh/whyour/chrome-calendar@latest/chrome-calendar.crx)
+cdn 下载 [chrome-calendar.crx](https://cdn.jsdelivr.net/gh/whyour/chrome-calendar@latest/chrome-calendar.crx)
 
 Chrome 安装
 ----
