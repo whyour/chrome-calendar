@@ -13,7 +13,7 @@ export function getDocData(response) {
       glClass,
       glText,
       bzlClass,
-      bzlText
+      bzlText,
     });
   }
 
@@ -50,7 +50,7 @@ export function getDocData(response) {
       riqi,
       nongli,
       ganzhi,
-      jieri
+      jieri,
     });
   }
 
@@ -58,6 +58,6 @@ export function getDocData(response) {
     firstBlank,
     lastBlank,
     dateArr: arr,
-    detailArr
+    detailArr,
   };
 }

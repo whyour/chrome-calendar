@@ -155,7 +155,7 @@ export default {
       lastBlank: [],
       firstBlank: [],
       dateArr: [],
-      detailArr: []
+      detailArr: [],
     };
   },
   mounted() {
@@ -165,15 +165,17 @@ export default {
     fetchDetail() {
       const query = `${this.currentYear}-${this.currentMonth}`;
       fetch(`/api/ajax/?q=${query}`, {
-        method: "get"
+        method: "get",
       })
-        .then(stream => stream.text())
-        .then(response => {
+        .then((stream) => stream.text())
+        .then((response) => {
           const { firstBlank, lastBlank, dateArr, detailArr } = getDocData(
             response
           );
-          this.firstBlank = [...Array(firstBlank).keys()].map(x => "first" + x);
-          this.lastBlank = [...Array(lastBlank).keys()].map(x => "last" + x);
+          this.firstBlank = [...Array(firstBlank).keys()].map(
+            (x) => "first" + x
+          );
+          this.lastBlank = [...Array(lastBlank).keys()].map((x) => "last" + x);
           this.dateArr = dateArr;
           this.detailArr = detailArr;
         });
@@ -237,8 +239,8 @@ export default {
       this.currentYear = new Date().getFullYear();
       this.currentDay = this.getString(day);
       this.fetchDetail();
-    }
-  }
+    },
+  },
 };
 </script>
 

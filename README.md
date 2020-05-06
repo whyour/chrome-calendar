@@ -4,11 +4,11 @@ chrome poetry calendar (Chrome Extension) V0.0.1
 
 [![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg)](LICENSE)
 
-![home](https://cdn.jsdelivr.net/gh/whyour/chrome-dashboard@latest/public/home.jpg)
+![home](https://cdn.jsdelivr.net/gh/whyour/chrome-calendar@latest/public/home.jpg)
 
-下载插件 [chrome-dashboard.crx](https://github.com/whyour/chrome-dashboard/raw/master/chrome-calendar.crx)
+下载插件 [chrome-dashboard.crx](https://github.com/whyour/chrome-calendar/raw/master/chrome-calendar.crx)
 
-cdn 下载 [chrome-dashboard.crx](https://cdn.jsdelivr.net/gh/whyour/chrome-dashboard@latest/chrome-calendar.crx)
+cdn 下载 [chrome-dashboard.crx](https://cdn.jsdelivr.net/gh/whyour/chrome-calendar@latest/chrome-calendar.crx)
 
 Chrome 安装
 ----
@@ -20,7 +20,7 @@ Chrome 安装
 -------
 - [x] 日历功能
 - [ ] 显示诗词
-- [ ] 
+- [ ] ...
 
 更新日志
 -------
