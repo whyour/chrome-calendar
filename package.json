@@ -11,6 +11,8 @@
   },
   "dependencies": {
     "core-js": "^3.6.4",
+    "koa": "^2.11.0",
+    "node-fetch": "^2.6.0",
     "vue": "^2.6.11"
   },
   "devDependencies": {
