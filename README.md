@@ -6,15 +6,17 @@ chrome poetry calendar (Chrome Extension) V0.0.1
 
 ![home](https://cdn.jsdelivr.net/gh/whyour/chrome-calendar@latest/public/home.jpg)
 
-下载插件 [chrome-calendar.crx](https://github.com/whyour/chrome-calendar/raw/master/chrome-calendar.crx)
+下载插件 [chrome-calendar.zip](https://github.com/whyour/chrome-calendar/raw/master/chrome-calendar.zip)
 
-cdn 下载 [chrome-calendar.crx](https://cdn.jsdelivr.net/gh/whyour/chrome-calendar@latest/chrome-calendar.crx)
+cdn 下载 [chrome-calendar.zip](https://cdn.jsdelivr.net/gh/whyour/chrome-calendar@latest/chrome-calendar.zip)
 
 Chrome 安装
 ----
 1. chrome 右上角的设置按钮下找到更多工具，打开`扩展程序`
 
-2. 先选中`开发者模式`，拖拽下载的 `chrome-calendar.crx` 到 chrome 中， 完成安装！
+2. 先选中`开发者模式`，解压下载的 zip 包，点击加载解压的文件，选择刚才解压的文件夹
+
+![home](https://cdn.jsdelivr.net/gh/whyour/chrome-calendar@latest/public/compress.jpg)
 
 要做
 -------
