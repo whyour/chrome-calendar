@@ -7,5 +7,5 @@
     "newtab": "index.html"
   },
   "manifest_version": 2,
-  "permissions":[ "https://api.whyour.cn" ]
+  "permissions":[ "https://api.whyour.cn/" ]
 }
