@@ -164,7 +164,7 @@ export default {
   methods: {
     fetchDetail() {
       const query = `${this.currentYear}-${this.currentMonth}`;
-      fetch(`/api/calendar?q=${query}`, {
+      fetch(`https://api.whyour.cn/calendar?q=${query}`, {
         method: "get",
       })
         .then((stream) => stream.text())
