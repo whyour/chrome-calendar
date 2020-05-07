@@ -7,10 +7,11 @@
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
     "build:crx": "vue-cli-service build && cp manifest.json ./dist && cp key.pem ./dist",
-    "generate:crx": "npm run build:crx && node scripts/generate-crx.js"
+    "generate:crx": "npm run build:crx && node scripts/generate-zip.js"
   },
   "dependencies": {
     "core-js": "^3.6.4",
+    "jszip": "^3.4.0",
     "vue": "^2.6.11"
   },
   "devDependencies": {
