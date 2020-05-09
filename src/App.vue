@@ -136,7 +136,7 @@
             </div>
             <div class="poetry text-center" v-if="poetry">
               <h2>{{ poetry.title }}</h2>
-              <div>{{ poetry.author }}</div>
+              <div class="author">{{ poetry.author }}</div>
               <div class="content">
                 <div v-for="item in poetry.content" :key="item">{{ item }}</div>
               </div>
@@ -201,8 +201,8 @@ export default {
     getTitle(data) {
       if (data.title) {
         return (
-          `${data.chapter ? "·" + data.chapter : ""}${
-            data.section ? "·" + data.section : ""
+          `${data.chapter ? data.chapter + "·" : ""}${
+            data.section ? data.section + "·" : ""
           }` + data.title
         );
       }

@@ -50,6 +50,16 @@ html, body {
 
 .poetry .content {
   margin-top: 10px;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+.poetry .author {
+  font-size: 15px;
+}
+
+.poetry h2 {
+  margin: 20px 0 10px;
 }
 
 .wnrl_k_you_id_biaoti {
