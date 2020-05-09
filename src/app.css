@@ -43,7 +43,7 @@ html, body {
 }
 
 .wnrl_k_you {
-  height: calc(100% - 20px);
+  height: calc(100% - 10px);
   overflow: auto;
   padding-top: 10px;
 }

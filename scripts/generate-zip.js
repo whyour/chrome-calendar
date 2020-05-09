@@ -7,7 +7,11 @@ const distDir = path.resolve(__dirname, "../dist");
 function pushZip(folder, pPath) {
   const files = fs.readdirSync(pPath, { withFileTypes: true });
   for (const directory of files) {
-    if (directory.name.includes(".map") || directory.name.includes(".jpg")) {
+    if (
+      directory.name.includes(".map") ||
+      directory.name.includes(".jpg") ||
+      directory.name.includes(".png")
+    ) {
       continue;
     }
     let filePath = `${pPath}/${directory.name}`;
