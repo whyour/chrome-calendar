@@ -1,6 +1,6 @@
 chrome poetry calendar (Chrome Extension) V0.0.1
 ==========
-（最后更新于 2020 年 05 月 06 日）
+（最后更新于 2020 年 05 月 10 日）
 
 [![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg)](LICENSE)
 
@@ -21,11 +21,14 @@ Chrome 安装
 要做
 -------
 - [x] 日历功能
-- [ ] 显示诗词
+- [x] 显示诗词
 - [ ] ...
 
 更新日志
 -------
+`2020-05-10`
+* 增加诗词功能
+
 `2020-05-06`
 * 增加日历功能
 

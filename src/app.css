@@ -1,5 +1,15 @@
+html, body {
+  height: 100%;
+  overflow: hidden;
+}
+
+.text-center {
+  text-align: center;
+}
+
 .wnrl_k {
   width: 100%;
+  box-sizing: border-box;
   display: block;
   overflow: hidden;
   background-color: #e0f3e8;
@@ -9,7 +19,8 @@
   margin-bottom: 10px;
   -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
-  border-radius: 3px
+  border-radius: 3px;
+  height: calc(100vh - 97px)
 }
 
 .wnrl_k_zuo {
@@ -21,12 +32,24 @@
   background-color: #fff
 }
 
-.wnrl_k_you {
-  padding-top: 10px;
+.wnrl_k_you, .poetry {
   padding-right: 20px;
   padding-left: 20px;
+}
+
+.poetry {
+  padding-bottom: 10px;
   overflow: hidden;
-  display: none;
+}
+
+.wnrl_k_you {
+  height: calc(100% - 20px);
+  overflow: auto;
+  padding-top: 10px;
+}
+
+.poetry .content {
+  margin-top: 10px;
 }
 
 .wnrl_k_you_id_biaoti {
@@ -217,33 +240,33 @@
 
 .wnrl_kongbai {
   width: 14.285714%;
-  height: 84px;
+  height: calc((100vh - 190px) / 5);
   float: left;
   border-top-width: 1px;
   border-top-style: solid;
   border-top-color: #c8cacc;
-  display: block;
+  display: flex;
   overflow: hidden
 }
 
 .wnrl_riqi {
   width: 14.285714%;
-  height: 84px;
+  height: calc((100vh - 190px) / 5);
   float: left;
   border-top-width: 1px;
   border-top-style: solid;
   border-top-color: #c8cacc;
-  display: block;
+  display: flex;
   overflow: hidden
 }
 
 .wnrl_riqi_xiu {
-  background-image: url(//f.51240.com/file/wannianrili/bg.png?v=1);
+  background-image: url(https://cdn.jsdelivr.net/gh/whyour/chrome-calendar@latest/public/bg.png);
   background-repeat: no-repeat
 }
 
 .wnrl_riqi_ban {
-  background-image: url(//f.51240.com/file/wannianrili/bg.png?v=1);
+  background-image: url(https://cdn.jsdelivr.net/gh/whyour/chrome-calendar@latest/public/bg.png);
   background-repeat: no-repeat;
   background-position: -100px 0
 }
@@ -253,7 +276,6 @@
   text-decoration: none;
   border: 2px solid #fff;
   width: calc(100% - 4px);
-  height: 80px;
   display: flex;
   justify-content: center;
   flex-direction: column;

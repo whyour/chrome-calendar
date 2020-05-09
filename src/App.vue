@@ -1,5 +1,5 @@
 <template>
-  <div class="text-center section">
+  <div class="section">
     <h2 class="h2">诗词日历</h2>
     <div class="wnrl_k">
       <div class="wnrl_k_zuo">
@@ -119,25 +119,31 @@
         </div>
         <div class="wnrl_kongbai" v-for="item in lastBlank" :key="item"></div>
       </div>
-      <div
-        class="wnrl_k_you"
-        v-for="item in detailArr"
-        :key="item.nongli"
-        :style="{ display: item.riqi === currentDay ? 'block' : 'none' }"
-      >
-        <div class="wnrl_k_you_id_biaoti">{{ item.biaoti }}</div>
-        <div class="wnrl_k_you_id_wnrl_riqi">{{ item.riqi }}</div>
-        <div class="wnrl_k_you_id_wnrl_nongli">{{ item.nongli }}</div>
-        <div class="wnrl_k_you_id_wnrl_nongli_ganzhi">
-          {{ item.ganzhi }}
-        </div>
-        <div class="wnrl_k_you_id_wnrl_jieri" v-if="item.jieri">
-          <span class="wnrl_k_you_id_wnrl_jieri_biaoti">节日</span
-          ><span class="wnrl_k_you_id_wnrl_jieri_neirong"
-            >{{ item.jieri }}
-          </span>
-        </div>
-      </div>
+      <template v-for="item in detailArr">
+        <template v-if="item.riqi === currentDay">
+          <div class="wnrl_k_you" :key="item.nongli">
+            <div class="wnrl_k_you_id_biaoti">{{ item.biaoti }}</div>
+            <div class="wnrl_k_you_id_wnrl_riqi">{{ item.riqi }}</div>
+            <div class="wnrl_k_you_id_wnrl_nongli">{{ item.nongli }}</div>
+            <div class="wnrl_k_you_id_wnrl_nongli_ganzhi">
+              {{ item.ganzhi }}
+            </div>
+            <div class="wnrl_k_you_id_wnrl_jieri" v-if="item.jieri">
+              <span class="wnrl_k_you_id_wnrl_jieri_biaoti">节日</span
+              ><span class="wnrl_k_you_id_wnrl_jieri_neirong"
+                >{{ item.jieri }}
+              </span>
+            </div>
+            <div class="poetry text-center" v-if="poetry">
+              <h2>{{ poetry.title }}</h2>
+              <div>{{ poetry.author }}</div>
+              <div class="content">
+                <div v-for="item in poetry.content" :key="item">{{ item }}</div>
+              </div>
+            </div>
+          </div>
+        </template>
+      </template>
     </div>
   </div>
 </template>
@@ -156,6 +162,7 @@ export default {
       firstBlank: [],
       dateArr: [],
       detailArr: [],
+      poetry: null,
     };
   },
   mounted() {
@@ -179,12 +186,35 @@ export default {
           this.dateArr = dateArr;
           this.detailArr = detailArr;
         });
+
+      fetch("https://api.whyour.cn/shici")
+        .then((stream) => stream.json())
+        .then((response) => {
+          const data = response.data;
+          this.poetry = {
+            content: data.content || data.paragraphs,
+            title: this.getTitle(data),
+            author: data.author,
+          };
+        });
+    },
+    getTitle(data) {
+      if (data.title) {
+        return (
+          `${data.chapter ? "·" + data.chapter : ""}${
+            data.section ? "·" + data.section : ""
+          }` + data.title
+        );
+      }
+      return data.rhythmic || data.chapter;
     },
     clickDay(day) {
       this.currentDay = day;
     },
     getString(monthOrDay) {
-      return parseInt(monthOrDay / 10) === 0 ? `0${monthOrDay}` : monthOrDay;
+      return parseInt(monthOrDay / 10) === 0
+        ? `0${monthOrDay}`
+        : monthOrDay + "";
     },
     prevMonth() {
       let number = parseInt(this.currentMonth);
