@@ -6975,10 +6975,10 @@ sass-loader@^8.0.2:
     schema-utils "^2.6.1"
     semver "^6.3.0"
 
-sass@^1.26.3:
-  version "1.26.5"
-  resolved "https://registry.npm.taobao.org/sass/download/sass-1.26.5.tgz?cache=0&sync_timestamp=1587697292897&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fsass%2Fdownload%2Fsass-1.26.5.tgz#2d7aecfbbabfa298567c8f06615b6e24d2d68099"
-  integrity sha1-LXrs+7q/ophWfI8GYVtuJNLWgJk=
+sass@^1.26.6:
+  version "1.26.6"
+  resolved "https://registry.yarnpkg.com/sass/-/sass-1.26.6.tgz#f1b095c2a5693db953678d6c7bc96ca9567c9eed"
+  integrity sha512-U6ZmX+Bymjz5NavdfjUqmLjgVrEBFgmn/3/OOMktI45xJeH/AQEhHAm/Aj19WhiHXixiP1HzdYusZX1sQ8XWmw==
   dependencies:
     chokidar ">=2.0.0 <4.0.0"
 
