@@ -1009,13 +1009,6 @@
   resolved "https://registry.npm.taobao.org/@types/q/download/@types/q-1.5.2.tgz?cache=0&sync_timestamp=1588201373449&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40types%2Fq%2Fdownload%2F%40types%2Fq-1.5.2.tgz#690a1475b84f2a884fd07cd797c00f5f31356ea8"
   integrity sha1-aQoUdbhPKohP0HzXl8APXzE1bqg=
 
-"@types/semver@^7.2.0":
-  version "7.3.1"
-  resolved "https://registry.yarnpkg.com/@types/semver/-/semver-7.3.1.tgz#7a9a5d595b6d873f338c867dcef64df289468cfa"
-  integrity sha512-ooD/FJ8EuwlDKOI6D9HWxgIgJjMg2cuziXm/42npDC8y4NjxplBUn9loewZiBNCt44450lHAU0OSb51/UqXeag==
-  dependencies:
-    "@types/node" "*"
-
 "@vue/babel-helper-vue-jsx-merge-props@^1.0.0":
   version "1.0.0"
   resolved "https://registry.npm.taobao.org/@vue/babel-helper-vue-jsx-merge-props/download/@vue/babel-helper-vue-jsx-merge-props-1.0.0.tgz#048fe579958da408fb7a8b2a3ec050b50a661040"
@@ -3281,12 +3274,11 @@ eslint-plugin-prettier@^3.1.4:
   dependencies:
     prettier-linter-helpers "^1.0.0"
 
-eslint-plugin-vue@^7.0.0-alpha.9:
-  version "7.0.0-alpha.9"
-  resolved "https://registry.yarnpkg.com/eslint-plugin-vue/-/eslint-plugin-vue-7.0.0-alpha.9.tgz#a7850e196a8ae6061ed81f47bc9143c054a53dc0"
-  integrity sha512-QJQUtogYe7CyEWPI7bLazoBFhPt1kmoq1OUUHHSc23PojbuDRchVAY7Ffa8uxvrLhoGgROVSl1o3ktyF6ydPAQ==
+eslint-plugin-vue@^7.0.0-alpha.10:
+  version "7.0.0-alpha.10"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-vue/-/eslint-plugin-vue-7.0.0-alpha.10.tgz#e9ff56917370ead874859084270801b5b5e8c3ee"
+  integrity sha512-NFhzOfuD9OU/94lLGXQJ6112MhRGjgnrGBDnPkB7hQDZEVOdkkoQbufxR425Vm60MNK3GjRepQA88et/fUMBZA==
   dependencies:
-    "@types/semver" "^7.2.0"
     eslint-utils "^2.0.0"
     natural-compare "^1.4.0"
     semver "^7.3.2"
