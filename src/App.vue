@@ -171,7 +171,7 @@ export default {
   methods: {
     fetchDetail() {
       const query = `${this.currentYear}-${this.currentMonth}`;
-      fetch(`https://api.ninesix.cc/calendar?q=${query}`, {
+      fetch(`https://api.ninesix.cc/api/calendar?q=${query}`, {
         method: "get",
       })
         .then((stream) => stream.text())
@@ -187,7 +187,7 @@ export default {
           this.detailArr = detailArr;
         });
 
-      fetch("https://api.ninesix.cc/shici")
+      fetch("https://api.ninesix.cc/api/shici")
         .then((stream) => stream.json())
         .then((response) => {
           const data = response.data;
