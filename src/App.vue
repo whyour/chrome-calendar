@@ -100,22 +100,26 @@
             >{{ currentYear }}年{{ currentMonth }}月</span
           >
         </div>
-        <div class="wnrl_xingqi">一</div>
-        <div class="wnrl_xingqi">二</div>
-        <div class="wnrl_xingqi">三</div>
-        <div class="wnrl_xingqi">四</div>
-        <div class="wnrl_xingqi">五</div>
-        <div class="wnrl_xingqi">六</div>
-        <div class="wnrl_xingqi">日</div>
+        <div>
+          <div class="wnrl_xingqi">一</div>
+          <div class="wnrl_xingqi">二</div>
+          <div class="wnrl_xingqi">三</div>
+          <div class="wnrl_xingqi">四</div>
+          <div class="wnrl_xingqi">五</div>
+          <div class="wnrl_xingqi">六</div>
+          <div class="wnrl_xingqi">日</div>
+        </div>
         <div class="wnrl_kongbai" v-for="item in firstBlank" :key="item"></div>
-        <div class="wnrl_riqi" v-for="item in dateArr" :key="item.glText">
-          <a
-            href="javascript:;"
-            :class="[item.aClass, { active: item.glText === currentDay }]"
-            @click="clickDay(item.glText)"
-            ><span :class="item.glClass">{{ item.glText }}</span
-            ><span :class="item.bzlClass">{{ item.bzlText }}</span></a
-          >
+        <div class="wnrl_riqi_wrapper">
+          <div class="wnrl_riqi" v-for="item in dateArr" :key="item.glText">
+            <a
+              href="javascript:;"
+              :class="[item.aClass, { active: item.glText === currentDay }]"
+              @click="clickDay(item.glText)"
+              ><span :class="item.glClass">{{ item.glText }}</span
+              ><span :class="item.bzlClass">{{ item.bzlText }}</span></a
+            >
+          </div>
         </div>
         <div class="wnrl_kongbai" v-for="item in lastBlank" :key="item"></div>
       </div>

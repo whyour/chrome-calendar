@@ -9,8 +9,7 @@ html, body {
 
 .wnrl_k {
   width: 100%;
-  box-sizing: border-box;
-  display: block;
+  display: flex;
   overflow: hidden;
   background-color: #e0f3e8;
   border: 2px solid #8ec59b;
@@ -25,10 +24,9 @@ html, body {
 
 .wnrl_k_zuo {
   padding: 8px;
-  width: 50%;
-  display: block;
-  overflow: hidden;
-  float: left;
+  flex: 0 0 49%;
+  display: flex;
+  flex-direction: column;
   background-color: #fff
 }
 
@@ -46,6 +44,7 @@ html, body {
   height: calc(100% - 10px);
   overflow: auto;
   padding-top: 10px;
+  flex: 0 0 49%;
 }
 
 .poetry .content {
@@ -210,13 +209,17 @@ html, body {
 }
 
 .wnrl_xuanze_top {
-  display: block;
   height: 32px;
   line-height: 32px;
   width: 100%;
-  float: left;
   overflow: hidden;
   margin-bottom: 4px
+}
+
+.wnrl_riqi_wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  flex: 1;
 }
 
 .wnrl_xuanze_top input, .wnrl_xuanze_top select {
@@ -261,8 +264,6 @@ html, body {
 
 .wnrl_riqi {
   width: 14.285714%;
-  height: calc((100vh - 157px) / 5);
-  float: left;
   border-top-width: 1px;
   border-top-style: solid;
   border-top-color: #c8cacc;
@@ -275,10 +276,16 @@ html, body {
   background-repeat: no-repeat
 }
 
+.wnrl_riqi_mo {
+  background-image: url(https://cdn.jsdelivr.net/gh/whyour/chrome-calendar@latest/public/bg.png);
+  background-repeat: no-repeat;
+  background-position: -200px 0;
+}
+
 .wnrl_riqi_ban {
   background-image: url(https://cdn.jsdelivr.net/gh/whyour/chrome-calendar@latest/public/bg.png);
   background-repeat: no-repeat;
-  background-position: -200px 0
+  background-position: -100px 0
 }
 
 .wnrl_riqi a {
