@@ -10,7 +10,7 @@
     "generate:crx": "npm run build:crx && node scripts/generate-zip.js"
   },
   "dependencies": {
-    "core-js": "^3.8.3",
+    "core-js": "^3.9.1",
     "jszip": "^3.5.0",
     "vue": "^2.6.12"
   },
