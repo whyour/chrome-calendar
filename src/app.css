@@ -253,8 +253,6 @@ html, body {
 
 .wnrl_kongbai {
   width: 14.285714%;
-  height: calc((100vh - 157px) / 5);
-  float: left;
   border-top-width: 1px;
   border-top-style: solid;
   border-top-color: #c8cacc;

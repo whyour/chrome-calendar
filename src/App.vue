@@ -109,8 +109,15 @@
           <div class="wnrl_xingqi">六</div>
           <div class="wnrl_xingqi">日</div>
         </div>
-        <div class="wnrl_kongbai" v-for="item in firstBlank" :key="item"></div>
         <div class="wnrl_riqi_wrapper">
+        <div class="wnrl_kongbai" v-for="item in firstBlank" :key="item">
+          <a
+              href="javascript:;"
+              :class="[item.aClass]"
+              ><span :class="item.glClass"></span
+              ><span :class="item.bzlClass"></span></a
+            >
+        </div>
           <div class="wnrl_riqi" v-for="item in dateArr" :key="item.glText">
             <a
               href="javascript:;"
@@ -120,8 +127,15 @@
               ><span :class="item.bzlClass">{{ item.bzlText }}</span></a
             >
           </div>
+        <div class="wnrl_kongbai" v-for="item in lastBlank" :key="item">
+          <a
+              href="javascript:;"
+              :class="[item.aClass]"
+              ><span :class="item.glClass"></span
+              ><span :class="item.bzlClass"></span></a
+            >
         </div>
-        <div class="wnrl_kongbai" v-for="item in lastBlank" :key="item"></div>
+        </div>
       </div>
       <template v-for="item in detailArr">
         <template v-if="item.riqi === currentDay">
